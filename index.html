@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gustavo Fragas - WDD 231 - Course Home Page</title>
+    <meta name="description" content="WDD 231 Course Home Page for Gustavo Fragas">
+    <meta name="author" content="Gustavo Fragas">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.jpeg" alt="Site Logo" width="50" height="50" id="logo">
+        <span>Gustavo Fragas</span>
+        <button id="hamburger" aria-label="Menu" type="button">&#9776;</button>
+    </header>
+    
+    <nav id="primaryNav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber Project</a></li>
+            <li><a href="project/index.html">Final Project</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Home</h1>
+        <div class="grid-container">
+            <section class="card section-about">
+                <h2>About Me</h2>
+                <p><strong>Jr. Software Developer | Full Stack | .NET & Cloud Specialist</strong><br>
+                Trilingual: POR | SPA | ENG</p>
+                <p>Software engineering focused on scalability, intelligent automation, and cloud infrastructure.</p>
+                <ul>
+                    <li>🚀 <strong>Currently:</strong> Jr. Software Developer at Alest Consultoria, developing serverless architectures, AI agent orchestration, and high-performance middlewares.</li>
+                    <li>🎓 <strong>Education:</strong> Pursuing a Bachelor's in Software Development at BYU-Idaho (USA). Associate's in Systems Analysis and Development (ADS) from UFBRA. Systems Development Technician from ETEC Parque Belém.</li>
+                    <li>🛠️ <strong>Current Focus:</strong> Enterprise process automation via GCP, identity security (DWD), and observability with Datadog.</li>
+                    <li>🌐 <strong>Languages:</strong> Spanish (Native Fluency) and Advanced English (B2 - BYU-Idaho).</li>
+                </ul>
+            </section>
+            
+            <section class="card section-photo">
+                <h2>Student Photo</h2>
+                <img src="images/profilepicture.jpeg" alt="Gustavo Fragas Profile Photo" width="200" height="200" loading="lazy">
+            </section>
+            
+            <section class="card section-courses">
+                <h2>Web Certificate Courses</h2>
+                <div class="filter-buttons">
+                    <button id="btn-all">All</button>
+                    <button id="btn-cse">CSE</button>
+                    <button id="btn-wdd">WDD</button>
+                </div>
+                <div id="course-container"></div>
+                <p>The total credits for courses listed above is <span id="total-credits">0</span></p>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub" width="30" height="30">
+            </a>
+            <a href="https://www.linkedin.com/in/gustavofragascunha/" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="LinkedIn" width="30" height="30">
+            </a>
+            <a href="https://www.instagram.com/fragas_gustavo/" target="_blank" rel="noopener noreferrer">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg" alt="Instagram" width="30" height="30">
+            </a>
+        </div>
+        <p>&copy; <span id="currentyear"></span> &#8226; Gustavo Fragas &#8226; Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
