@@ -1,0 +1,30 @@
+The Chamber of Commerce Project Description
+Overview
+The website project is an opportunity to apply the concepts presented in the learning activities. The goal is to meet the course objectives through development specifications. You will select the town, city, municipality, or region, such as your home town, to be the location subject of the site. The project provides opportunities to apply the concepts presented in the course.
+
+A chamber of commerce is a local organization of businesses that work together to strengthen the business interests of the group. The intent of a chamber of commerce is to foster networking and to advocate on the behalf of the community.
+
+What is a Chamber of Commerce?
+The goal of the chamber of commerce site is to promote the business interests of its members. You may need to add fictitious content to meet project development requirements.
+
+What is a Chamber of Commerce? – Indeed
+Live Example: Carlsbad Chamber of Commerce – carlsbad.org
+Project Specifications
+General Design
+The site is built with valid, semantic, and contemporary HTML, CSS, and JavaScript.
+The design is consistent on all pages by providing ease of navigation and positive user experiences.
+The site is responsive to mobile and larger width clients.
+Page Specifications
+📄 Home – The home page will contain some attention grabbing information along with community information, weather, calls to action, and business spotlights.
+📄 Discover – The discover page locale history, current demographics, and current events. An image montage will orient visitors to the area and interesting area sites, etc.
+📄 Directory – This page provides a list of local business and other organizations that belong to the chamber of commerce.
+📄 Join – This page contains information about the benefit of joining the chamber and a membership application form. There are three membership level options of non-profit, silver, and gold. The different levels have different perks including directory listings, publications, trainings, social media work, luncheons, sponsorships, advertising, etc.
+Developmental Specifications
+The learning outcomes of the course drive the site specifications.
+
+The course's development standards are met.
+The site is structured with valid, standards-based, semantic markup that is responsive.
+The site is styled and presented with valid, standards-based CSS that supports responsive views using media queries and other modern methods.
+The site meets functional, content, and behavior specifications that are listed.
+The design ensures that the site meets user expectations by providing a positive experience through adhering to standard design principles and utilizing easy-to-use user interfaces.
+The published site meets the intent as an applied-learning, assessment interface for the course learning outcomes.

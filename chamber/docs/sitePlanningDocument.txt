@@ -1,0 +1,60 @@
+The Chamber of Commerce Site Plan
+Overview
+Site and application planning is a critical step in successful software development projects. The website plan provides a blueprint from which to design and develop the project for a chamber of commerce site for a local town or region of your choice. DO NOT build a site for "Timbuktu Chamber of Commerce" this is just an example for you to look at. You should build a chamber of commerce for your city of residence.
+
+The purpose of this activity is for you to become familiar with the chamber of commerce website project. You will work on this project as a group in weeks 2 through week 5 of the course, adding content and functionality as the course progresses. Each member of the group will develop their own site.
+
+Instructions
+Review prior coursework involving website planning and development.
+WDD 131: Dynamic Web Fundamentals – Project Site Plan
+Ask yourself, and others, about what planning section seemed to be the most helpful when developing the websites.
+What items changed after addition information was given?
+What kind of questions should be asked of the client in order to get a clearer purpose of the intent and goal of the website or web application?
+Review the Chamber Project Description
+Example Site Plan
+Use this example site plan to guide your development work for the project. You will be required to build your pages using the layouts and content as illustrated. The wireframes provided here are for the landing page of the site which you will build in week 3 of this course.
+
+Site Name
+Timbuktu Chamber of Commerce
+
+Site Purpose
+This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.
+
+Target Market
+Business owners and patrons in the city of Timbuktu and surrounding areas.
+
+Site Goals
+Improve member engagement by providing valuable resources and networking opportunities.
+Attract new businesses and encourage economic development in the community.
+Improve the visibility and reputation of the chamber as a trusted authority in local business matters.
+User Personas
+Small Business Owner: Maria is a 35-year-old entrepreneur who owns a small boutique shop in town. She is looking for networking opportunities, business resources, and marketing support to help grow her business.
+Corporate Executive: Diego is a 47-year-old executive at a large company looking for growth opportunities. His company is interested in partnership opportunities, economic development resources, and networking with other business leaders in the area
+The New Resident: Francisco recently moved into the community and is looking to learn more about services available in the area. He is interested in finding business directories, event calendars, and community service opportunities.
+Scenarios
+A local business owner is interested in joining the chamber of commerce to network with other business owners. They visit the website to find information on membership benefits, fees, and how to apply.
+A community member is looking for upcoming events and workshops hosted by the chamber. They visit the website to browse the events calendar and register for interesting activities.
+A visitor from out of town is considering relocating to the area and wants to learn more about the local business environment. They explore the chamber's website for information on existing businesses, availability of skilled labor, and quality of life in the area.
+SEO Plan
+Use relevant keywords in site descriptions, content, and blog posts.
+Verify the site on Google's Business Profile.
+Get inbound links or backlinks from all member business to improve rankings.
+Embed Google Analytics in all site pages.
+Design Brief
+Primary Color: ______
+Secondary Color: ______
+Background Color: ______
+Text Color: ______
+Font Family: _____________________
+
+You will be selecting your site's color scheme and typography.
+
+Site Map
+Chamber Site Map
+Wireframes
+Desktop
+Chamber Desktop Wireframe
+Mobile
+Chamber Mobile Wireframe
+Note that you will need to decide upon the some styling considerations such as the color scheme that you will use and the typography.
+
