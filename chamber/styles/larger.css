@@ -1,0 +1,42 @@
+/* Desktop view (larger.css) */
+@media (min-width: 768px) {
+  
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 5%;
+  }
+
+  nav#primaryNav {
+    width: auto;
+    margin-top: 0;
+  }
+
+  nav#primaryNav ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  nav#primaryNav a {
+    width: auto;
+    padding: 10px 15px;
+  }
+
+  #darkmode {
+    margin-top: 0;
+  }
+
+  /* Grid view layout */
+  #directory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+  }
+
+}

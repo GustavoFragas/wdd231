@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosthoughts</title>
+    <title>Bosthoughts - Directory</title>
     <meta name="description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston. It offers a curated list of local businesses, events, attractions, and services to help residents and visitors navigate and explore the city. Whether you're looking for dining options, entertainment venues, or community resources, Bosthoughts aims to be a comprehensive guide to all things Boston.">
     <meta name="keywords" content="Boston, directory, resources, local businesses, events, attractions, services, residents, visitors, dining options, entertainment venues, community resources">
     <meta name="author" content="Gustavo Fragas Cunha">
@@ -11,8 +11,7 @@
     <!-- Headline = Montserrat / Body = Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
     
     <!-- Meta Properties -->
     <meta property="og:title" content="Bosthoughts - Your Guide to Boston">
@@ -21,15 +20,63 @@
     <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/directory.html">
     
     <!-- Favicon -->
-    <link rel="icon" href="images/bosthoughts.png" type="image/png">
+    <link rel="icon" href="images/bosthoughts.jpeg" type="image/jpeg">
     <link rel="icon" href="images/faviconBosthoughts.ico" type="image/x-icon">
 
     <!-- Connections pages -->
-    <link rel="stylesheet" href="directory.css">
-    <script src="directory.js" defer></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/directory.js" defer></script>
 
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="images/trevo.jpeg" alt="Trevo" width="50" height="50" id="logoTrevo">
+            <span>Bosthoughts</span>
+        </div>
+        <nav id="primaryNav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+        <img src="images/light-dark-mode-solid.svg" alt="Dark Mode Toggle" width="30" height="30" id="darkmode">
+    </header>
+
+    <main>
+        <div class="view-controls">
+            <button id="grid-btn" aria-label="Grid View">Grid Layout</button>
+            <button id="list-btn" aria-label="List View">List Layout</button>
+        </div>
+        <div id="directory-container">
+            <!-- Members will be loaded here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p><strong>Bosthoughts</strong></p>
+            <p>18 Celtics Way,</p>
+            <p>Boston, MA 02114</p>
+            <p>info@bosthoughts.org</p>
+            <p>(617) 555-BOST</p>
+        </div>
+        <div class="social-icons">
+            <a href="#" aria-label="YouTube"><img src="images/youtube.svg" alt="YT" width="30" height="30" onerror="this.src='https://placehold.co/30?text=YT'"></a>
+            <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="X" width="30" height="30" onerror="this.src='https://placehold.co/30?text=TW'"></a>
+            <a href="#" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="IN" width="30" height="30" onerror="this.src='https://placehold.co/30?text=IN'"></a>
+        </div>
+        <div class="dev-info">
+            <p>WDD231 Class Project</p>
+            <p>Gustavo Fragas Cunha</p>
+            <p>&copy;<span id="currentyear"></span> Bosthoughts</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
 </body>
 </html>
