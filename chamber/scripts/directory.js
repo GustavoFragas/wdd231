@@ -65,13 +65,23 @@ const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
 const container = document.getElementById('directory-container');
 
-gridBtn.addEventListener('click', () => {
-    container.classList.remove('list-view');
-});
+function setView(mode) {
+    if (mode === 'list') {
+        container.classList.add('list-view');
+        listBtn.setAttribute('aria-pressed', 'true');
+        gridBtn.setAttribute('aria-pressed', 'false');
+    } else {
+        container.classList.remove('list-view');
+        gridBtn.setAttribute('aria-pressed', 'true');
+        listBtn.setAttribute('aria-pressed', 'false');
+    }
+}
 
-listBtn.addEventListener('click', () => {
-    container.classList.add('list-view');
-});
+gridBtn.addEventListener('click', () => setView('grid'));
+listBtn.addEventListener('click', () => setView('list'));
+
+// default state
+setView('grid');
 
 // FOOTER DATES
 const currentYearSpan = document.getElementById('currentyear');
@@ -82,7 +92,10 @@ if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
 // DARK MODE
 const darkBtn = document.getElementById('darkmode');
 darkBtn.addEventListener('click', () => {
-    document.body.parentNode.classList.toggle('dark-mode');
+    const html = document.documentElement;
+    html.classList.toggle('dark-mode');
+    const isDark = html.classList.contains('dark-mode');
+    darkBtn.setAttribute('aria-pressed', String(isDark));
 });
 
 getMembersData();

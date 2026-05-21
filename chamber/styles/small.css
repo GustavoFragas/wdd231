@@ -1,7 +1,8 @@
 /* Mobile First (small.css) */
 :root {
-  --primary-color: #007A33; /* Celtic Green */
-  --secondary-color: #BA9648; /* Gold */
+  --primary-color: #00532b; /* Celtic Green - darkened for AA contrast */
+  --secondary-color: #BA9648; /* Gold (decorative only) */
+  --link-color: #6b4f10;     /* Darker gold for AA text contrast on white */
   --bg-color: #F5F5F7;
   --text-color: #1D1D1F;
   --header-bg: #FFFFFF;
@@ -52,6 +53,23 @@ header {
 #darkmode {
   cursor: pointer;
   margin-top: 10px;
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  padding: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#darkmode:hover,
+#darkmode:focus-visible {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+#darkmode img {
+  display: block;
   filter: invert(0);
 }
 
@@ -65,6 +83,9 @@ header {
 }
 
 .dark-mode #darkmode {
+  filter: none;
+}
+.dark-mode #darkmode img {
   filter: invert(1);
 }
 
@@ -99,9 +120,11 @@ nav#primaryNav a {
   text-align: center;
   border-radius: 5px;
 }
-nav#primaryNav a.active, nav#primaryNav a:hover {
-  background-color: var(--secondary-color);
-  color: #1D1D1F;
+nav#primaryNav a.active, nav#primaryNav a:hover, nav#primaryNav a:focus-visible {
+  background-color: var(--primary-color);
+  color: white;
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
 main {
@@ -130,9 +153,12 @@ main {
   font-weight: bold;
   border-radius: 5px;
 }
-.view-controls button:hover {
-  background-color: var(--secondary-color);
-  color: #1D1D1F;
+.view-controls button:hover,
+.view-controls button:focus-visible {
+  background-color: #1D1D1F;
+  color: white;
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
 /* Base styles for cards (mobile will default to something looking like grid or collist) */
@@ -174,9 +200,16 @@ main {
 }
 
 .card a {
-  color: var(--secondary-color);
+  color: var(--link-color);
   font-weight: bold;
   word-break: break-all;
+}
+
+.card a:hover,
+.card a:focus-visible {
+  text-decoration: underline;
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 /* List view styling */
