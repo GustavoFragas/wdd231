@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - img "Trevo" [ref=e4]
+      - generic [ref=e5]: Bosthoughts
+    - navigation [ref=e6]:
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Home" [ref=e9] [cursor=pointer]:
+            - /url: ../index.html
+        - listitem [ref=e10]:
+          - link "Events" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Directory" [ref=e13] [cursor=pointer]:
+            - /url: directory.html
+        - listitem [ref=e14]:
+          - link "Join" [ref=e15] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e16]:
+          - link "Discover" [ref=e17] [cursor=pointer]:
+            - /url: "#"
+    - button "Toggle dark mode" [ref=e18] [cursor=pointer]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - button "Grid View" [pressed] [ref=e21] [cursor=pointer]: Grid Layout
+      - button "List View" [ref=e22] [cursor=pointer]: List Layout
+    - generic [ref=e23]:
+      - generic [ref=e24]:
+        - img "Logo of Red's Celtics Pub" [ref=e25]
+        - heading "Red's Celtics Pub" [level=2] [ref=e26]
+        - paragraph [ref=e27]: Irish Roots, Courtside Spirit. The best place to watch the game near TD Garden.
+        - paragraph [ref=e28]: 123 Causeway St, Boston, MA 02114
+        - paragraph [ref=e29]: (617) 555-0123
+        - link "Visit Website" [ref=e30] [cursor=pointer]:
+          - /url: https://redspub.example.com
+      - generic [ref=e31]:
+        - img "Logo of Beantown Ballers Academy" [ref=e32]
+        - heading "Beantown Ballers Academy" [level=2] [ref=e33]
+        - paragraph [ref=e34]: Train like a Pro, Celtics values. Youth basketball development.
+        - paragraph [ref=e35]: 456 Hoops Ave, Boston, MA 02115
+        - paragraph [ref=e36]: (617) 555-4567
+        - link "Visit Website" [ref=e37] [cursor=pointer]:
+          - /url: https://beantownballers.example.org
+      - generic [ref=e38]:
+        - img "Logo of TD Garden Gear Shop" [ref=e39]
+        - heading "TD Garden Gear Shop" [level=2] [ref=e40]
+        - paragraph [ref=e41]: Official Championship Fanwear. Get your green and gold here.
+        - paragraph [ref=e42]: 100 Legends Way, Boston, MA 02114
+        - paragraph [ref=e43]: (617) 555-8901
+        - link "Visit Website" [ref=e44] [cursor=pointer]:
+          - /url: https://tdgear.example.com
+      - generic [ref=e45]:
+        - img "Logo of Shamrock Memorabilia" [ref=e46]
+        - heading "Shamrock Memorabilia" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Authentic signed basketballs, jerseys, and tickets from the 18 championship years.
+        - paragraph [ref=e49]: 78 Heritage Rd, Boston, MA 02116
+        - paragraph [ref=e50]: (617) 555-2233
+        - link "Visit Website" [ref=e51] [cursor=pointer]:
+          - /url: https://shamrockmemo.example.com
+      - generic [ref=e52]:
+        - img "Logo of Green Team Athletics" [ref=e53]
+        - heading "Green Team Athletics" [level=2] [ref=e54]
+        - paragraph [ref=e55]: Sports equipment & uniforms for local leagues in the Greater Boston Area.
+        - paragraph [ref=e56]: 200 Fastbreak Blvd, Boston, MA 02118
+        - paragraph [ref=e57]: (617) 555-9988
+        - link "Visit Website" [ref=e58] [cursor=pointer]:
+          - /url: https://greenteamath.example.com
+      - generic [ref=e59]:
+        - img "Logo of Banner 18 Trainers" [ref=e60]
+        - heading "Banner 18 Trainers" [level=2] [ref=e61]
+        - paragraph [ref=e62]: Elite basketball skills training focusing on shooting, footwork, and Celtics' grit.
+        - paragraph [ref=e63]: 33 Dunk Ln, Cambridge, MA 02139
+        - paragraph [ref=e64]: (617) 555-4455
+        - link "Visit Website" [ref=e65] [cursor=pointer]:
+          - /url: https://banner18training.example.com
+      - generic [ref=e66]:
+        - img "Logo of Boston Sports Tours" [ref=e67]
+        - heading "Boston Sports Tours" [level=2] [ref=e68]
+        - paragraph [ref=e69]: Guided walking tours covering Boston's legendary basketball history and arenas.
+        - paragraph [ref=e70]: 1 Freedom Trail, Boston, MA 02108
+        - paragraph [ref=e71]: (617) 555-1122
+        - link "Visit Website" [ref=e72] [cursor=pointer]:
+          - /url: https://bostonsportstours.example.com
+  - contentinfo [ref=e73]:
+    - generic [ref=e74]:
+      - paragraph [ref=e75]:
+        - strong [ref=e76]: Bosthoughts
+      - paragraph [ref=e77]: 18 Celtics Way,
+      - paragraph [ref=e78]: Boston, MA 02114
+      - paragraph [ref=e79]: info@bosthoughts.org
+      - paragraph [ref=e80]: (617) 555-BOST
+    - generic [ref=e81]:
+      - link "GitHub" [ref=e82] [cursor=pointer]:
+        - /url: https://github.com/
+        - img "GitHub" [ref=e83]
+      - link "LinkedIn" [ref=e84] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/gustavofragascunha/
+        - img "LinkedIn" [ref=e85]
+      - link "Instagram" [ref=e86] [cursor=pointer]:
+        - /url: https://www.instagram.com/fragas_gustavo/
+        - img "Instagram" [ref=e87]
+    - generic [ref=e88]:
+      - paragraph [ref=e89]: WDD231 Class Project
+      - paragraph [ref=e90]: Gustavo Fragas Cunha
+      - paragraph [ref=e91]: ©2026 Bosthoughts
+      - paragraph [ref=e92]: "Last Modification: 05/20/2026 22:13:19"
