@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosthoughts - Directory</title>
-    <meta name="description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston. It offers a curated list of local businesses, events, attractions, and services to help residents and visitors navigate and explore the city. Whether you're looking for dining options, entertainment venues, or community resources, Bosthoughts aims to be a comprehensive guide to all things Boston.">
-    <meta name="keywords" content="Boston, directory, resources, local businesses, events, attractions, services, residents, visitors, dining options, entertainment venues, community resources">
+    <title>Bosthoughts - Home</title>
+    <meta name="description" content="Bosthoughts is the Boston chamber of commerce home page. Find local events, the current weather, and member spotlights from gold and silver businesses around the city.">
+    <meta name="keywords" content="Boston, chamber of commerce, directory, events, weather, member spotlights, local businesses">
     <meta name="author" content="Gustavo Fragas Cunha">
 
     <!-- Headline = Montserrat / Body = Open Sans -->
@@ -17,8 +17,8 @@
     <meta property="og:title" content="Bosthoughts - Your Guide to Boston">
     <meta property="og:description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston.">
     <meta property="og:image" content="https://gustavofragas.github.io/wdd231/chamber/images/bosthoughts.png">
-    <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/directory.html">
-    
+    <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/index.html">
+
     <!-- Favicon (small ICO only - jpeg removed to keep page weight under 500kB) -->
     <link rel="icon" href="images/faviconBosthoughts.ico" type="image/x-icon">
 
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/home.js" defer></script>
 
 </head>
 <body>
@@ -37,9 +37,9 @@
         </div>
         <nav id="primaryNav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="#">Events</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="#">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
@@ -49,13 +49,49 @@
         </button>
     </header>
 
-    <main>
-        <h1>Member Directory</h1>
-        <div class="view-controls">
-            <button type="button" id="grid-btn" aria-label="Grid View" aria-pressed="true">Grid Layout</button>
-            <button type="button" id="list-btn" aria-label="List View" aria-pressed="false">List Layout</button>
-        </div>
-        <div id="directory-container">
+    <main class="home">
+        <section class="hero" aria-label="Welcome">
+            <img src="images/hero-banner.jpg" alt="Boston Celtics Banner 18 Championship" id="hero-img">
+            <div class="hero-text">
+                <h1>Welcome to Bosthoughts</h1>
+                <p>Boston's chamber of commerce for sport, culture, and local business.</p>
+                <a href="#" class="cta">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="events" aria-label="Current Events">
+                <h2>Current Events</h2>
+                <article>
+                    <h3>Banner 18 Celebration Night</h3>
+                    <p><strong>Saturday, June 6 — TD Garden Plaza</strong></p>
+                    <p>Open-air party with member businesses, food trucks, and live music to celebrate the 18th championship.</p>
+                </article>
+                <article>
+                    <h3>Causeway Street Small Business Expo</h3>
+                    <p><strong>Saturday, June 20 — Causeway St</strong></p>
+                    <p>Local chamber members showcase products and services. Free entry for residents.</p>
+                </article>
+            </section>
+
+            <section class="weather" aria-label="Boston Weather">
+                <h2>Weather</h2>
+                <div class="weather-current">
+                    <figure>
+                        <img id="weather-icon" src="" alt="">
+                        <figcaption id="weather-desc"></figcaption>
+                    </figure>
+                    <p>Current temperature: <span id="current-temp"></span></p>
+                </div>
+                <h3>3-Day Forecast</h3>
+                <ul id="forecast"></ul>
+            </section>
+
+            <section class="spotlights" aria-label="Member Spotlights">
+                <h2>Member Spotlights</h2>
+                <div id="spotlight-container">
+                </div>
+            </section>
         </div>
     </main>
 

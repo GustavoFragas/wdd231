@@ -39,4 +39,37 @@
     text-align: left;
   }
 
+  .hero img {
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    max-width: 50%;
+    border-radius: 8px;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .spotlights {
+    grid-column: 1 / -1;
+  }
+
+  #spotlight-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
 }

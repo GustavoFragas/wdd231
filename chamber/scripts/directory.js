@@ -18,7 +18,6 @@ function displayMembers(members) {
         const card = document.createElement('div');
         card.classList.add('card');
 
-        // Image
         const img = document.createElement('img');
         img.src = `images/${member.imageFilename}`;
         img.alt = `Logo of ${member.name}`;
@@ -27,27 +26,23 @@ function displayMembers(members) {
         img.height = 150;
         img.onerror = () => { img.src = `https://placehold.co/200x150?text=${encodeURIComponent(member.name)}`; };
 
-        // Name
         const name = document.createElement('h2');
         name.textContent = member.name;
 
-        // Description
         const desc = document.createElement('p');
         desc.textContent = member.description;
-        
-        // Address
+
         const address = document.createElement('p');
         address.textContent = member.address;
 
-        // Phone
         const phone = document.createElement('p');
         phone.textContent = member.phone;
 
-        // Website
         const link = document.createElement('a');
         link.href = member.websiteUrl;
         link.textContent = "Visit Website";
         link.target = "_blank";
+        link.rel = "noopener noreferrer";
 
         card.appendChild(img);
         card.appendChild(name);
@@ -60,7 +55,6 @@ function displayMembers(members) {
     });
 }
 
-// TOGGLE VIEW EVENTS
 const gridBtn = document.getElementById('grid-btn');
 const listBtn = document.getElementById('list-btn');
 const container = document.getElementById('directory-container');
@@ -80,16 +74,13 @@ function setView(mode) {
 gridBtn.addEventListener('click', () => setView('grid'));
 listBtn.addEventListener('click', () => setView('list'));
 
-// default state
 setView('grid');
 
-// FOOTER DATES
 const currentYearSpan = document.getElementById('currentyear');
 const lastModifiedSpan = document.getElementById('lastModified');
 if (currentYearSpan) currentYearSpan.textContent = new Date().getFullYear();
 if (lastModifiedSpan) lastModifiedSpan.textContent = document.lastModified;
 
-// DARK MODE
 const darkBtn = document.getElementById('darkmode');
 darkBtn.addEventListener('click', () => {
     const html = document.documentElement;
