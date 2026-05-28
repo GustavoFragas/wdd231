@@ -11,6 +11,13 @@ darkBtn.addEventListener('click', () => {
     darkBtn.setAttribute('aria-pressed', String(isDark));
 });
 
+const hamburger = document.getElementById('hamburger');
+const primaryNav = document.getElementById('primaryNav');
+hamburger.addEventListener('click', () => {
+    const isOpen = primaryNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+});
+
 const apiKey = '17fad8ec4a7f65b85ab1ecc5eca758c7';
 const lat = 42.36;
 const lon = -71.06;

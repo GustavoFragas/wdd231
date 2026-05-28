@@ -89,4 +89,11 @@ darkBtn.addEventListener('click', () => {
     darkBtn.setAttribute('aria-pressed', String(isDark));
 });
 
+const hamburger = document.getElementById('hamburger');
+const primaryNav = document.getElementById('primaryNav');
+hamburger.addEventListener('click', () => {
+    const isOpen = primaryNav.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+});
+
 getMembersData();

@@ -10,6 +10,11 @@
   nav#primaryNav {
     width: auto;
     margin-top: 0;
+    display: block;
+  }
+
+  #hamburger {
+    display: none;
   }
 
   nav#primaryNav ul {
@@ -48,9 +53,12 @@
     position: absolute;
     bottom: 1.5rem;
     left: 1.5rem;
+    right: auto;
     max-width: 50%;
+    background-color: #00532b;
     border-radius: 8px;
     text-align: left;
+    padding: 1rem;
   }
 
   .hero-text h1 {
