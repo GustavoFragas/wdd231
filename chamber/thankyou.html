@@ -3,31 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosthoughts - Directory</title>
-    <meta name="description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston. It offers a curated list of local businesses, events, attractions, and services to help residents and visitors navigate and explore the city. Whether you're looking for dining options, entertainment venues, or community resources, Bosthoughts aims to be a comprehensive guide to all things Boston.">
-    <meta name="keywords" content="Boston, directory, resources, local businesses, events, attractions, services, residents, visitors, dining options, entertainment venues, community resources">
+    <title>Bosthoughts - Thank You</title>
+    <meta name="description" content="Thank you for applying to join the Bosthoughts chamber of commerce. We have received your membership application.">
     <meta name="author" content="Gustavo Fragas Cunha">
 
-    <!-- Headline = Montserrat / Body = Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
-    
-    <!-- Meta Properties -->
-    <meta property="og:title" content="Bosthoughts - Your Guide to Boston">
-    <meta property="og:description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Bosthoughts - Thank You">
+    <meta property="og:description" content="Thank you for applying to join the Bosthoughts chamber of commerce.">
     <meta property="og:image" content="https://gustavofragas.github.io/wdd231/chamber/images/bosthoughts.png">
-    <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/directory.html">
-    
-    <!-- Favicon (small ICO only - jpeg removed to keep page weight under 500kB) -->
+    <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/thankyou.html">
+
     <link rel="icon" href="images/faviconBosthoughts.ico" type="image/x-icon">
 
-    <!-- Connections pages -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/directory.js" defer></script>
-
+    <script src="scripts/thankyou.js" defer></script>
 </head>
 <body>
     <header>
@@ -39,7 +33,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://www.byupathway.edu/" target="_blank" rel="noopener noreferrer">Events</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
                 <li><a href="https://www.byupathway.edu/" target="_blank" rel="noopener noreferrer">Discover</a></li>
             </ul>
@@ -54,14 +48,21 @@
         </button>
     </header>
 
-    <main>
-        <h1>Member Directory</h1>
-        <div class="view-controls">
-            <button type="button" id="grid-btn" aria-label="Grid View" aria-pressed="true">Grid Layout</button>
-            <button type="button" id="list-btn" aria-label="List View" aria-pressed="false">List Layout</button>
-        </div>
-        <div id="directory-container">
-        </div>
+    <main class="thankyou">
+        <h1>Thank You!</h1>
+        <section class="card thankyou-card">
+            <p>Thank you for applying to join the Bosthoughts chamber of commerce. We have received your application and will be in touch soon.</p>
+            <h2>Your Information</h2>
+            <ul>
+                <li><strong>First Name:</strong> <span id="r-first"></span></li>
+                <li><strong>Last Name:</strong> <span id="r-last"></span></li>
+                <li><strong>Email:</strong> <span id="r-email"></span></li>
+                <li><strong>Mobile Phone:</strong> <span id="r-phone"></span></li>
+                <li><strong>Business / Organization:</strong> <span id="r-organization"></span></li>
+                <li><strong>Submitted:</strong> <span id="r-timestamp"></span></li>
+            </ul>
+            <a href="index.html" class="cta">Back to Home</a>
+        </section>
     </main>
 
     <footer>
