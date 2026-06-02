@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website site plan for The Citadel Codex, a Rick and Morty interactive encyclopedia built for the WDD231 final project.">
+    <meta name="author" content="Gustavo Fragas Cunha">
+    <title>Site Plan — The Citadel Codex</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+<body>
+
+    <header>
+        <h1>Site Plan</h1>
+        <p class="subtitle">The Citadel Codex — WDD231 Final Project</p>
+    </header>
+
+    <main>
+
+        <section id="site-name">
+            <h2>Site Name</h2>
+            <p><strong>The Citadel Codex</strong></p>
+            <p>
+                The name references The Citadel of Ricks, the central multiverse hub from the show.
+                "Codex" frames the site as a galactic database or encyclopedia — an authoritative
+                record of the Rick and Morty universe, keeping the tone both thematic and descriptive.
+            </p>
+        </section>
+
+        <section id="site-purpose">
+            <h2>Site Purpose</h2>
+            <p>
+                The Citadel Codex is an interactive encyclopedia that consumes the official
+                Rick and Morty REST API (<a href="https://rickandmortyapi.com" target="_blank" rel="noopener noreferrer">rickandmortyapi.com</a>).
+                It lets fans explore characters, episodes and locations across the multiverse.
+            </p>
+            <ul>
+                <li>Dynamic character grid fetched from the API, displaying image, name, status and species.</li>
+                <li>Modal dialogs for detailed character info (origin, last known location, episode count).</li>
+                <li>Favorites system using <code>localStorage</code> so bookmarks persist between sessions.</li>
+                <li>Galactic Registry form where users can register as Citadel Residents and submit theories.</li>
+            </ul>
+        </section>
+
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+
+            <article>
+                <h3>Scenario 1</h3>
+                <p class="question">"I want to quickly find out whether Rick C-137 is alive, dead, or unknown in the database. Where do I look?"</p>
+                <p>
+                    The user navigates to The Multi-Database page, types "Rick" in the search field
+                    and filters by species "Human." The character card for Rick Sanchez C-137 displays
+                    his status badge immediately. Clicking the card opens a modal with full details
+                    including origin dimension and last known location.
+                </p>
+            </article>
+
+            <article>
+                <h3>Scenario 2</h3>
+                <p class="question">"I found three characters I love. How do I save them so I can come back to them later without searching again?"</p>
+                <p>
+                    Each character card has a bookmark icon. Clicking it saves the character ID to
+                    <code>localStorage</code>. A dedicated "Favorites" filter on the same page shows
+                    only bookmarked characters. The bookmarks persist when the browser is closed and
+                    reopened.
+                </p>
+            </article>
+        </section>
+
+        <section id="color-scheme">
+            <h2>Color Scheme</h2>
+            <div class="color-swatches">
+                <div class="swatch swatch-bg">
+                    <span>#1e2229</span>
+                    <span>Background</span>
+                </div>
+                <div class="swatch swatch-text">
+                    <span>#ffffff</span>
+                    <span>Body Text</span>
+                </div>
+                <div class="swatch swatch-primary">
+                    <span>#5cad4a</span>
+                    <span>Primary — Portal Green</span>
+                </div>
+                <div class="swatch swatch-secondary">
+                    <span>#00b0c7</span>
+                    <span>Secondary — Science Blue</span>
+                </div>
+            </div>
+            <ul>
+                <li><strong>#1e2229 (Background):</strong> page background and section panels.</li>
+                <li><strong>#ffffff (Text):</strong> body paragraphs, list items and main reading text.</li>
+                <li><strong>#5cad4a (Portal Green):</strong> headings, section accent borders and primary highlights.</li>
+                <li><strong>#00b0c7 (Science Blue):</strong> links, buttons and interactive accents.</li>
+            </ul>
+        </section>
+
+        <section id="typography">
+            <h2>Typography</h2>
+
+            <div class="type-sample">
+                <p class="label">Headings — Orbitron (Google Fonts)</p>
+                <p class="sample-heading">The Citadel Codex</p>
+                <p class="sample-subheading">Multi-Database Archive</p>
+            </div>
+
+            <div class="type-sample">
+                <p class="label">Body — Roboto (Google Fonts)</p>
+                <p class="sample-body">
+                    Morty, I'm not the nicest guy in the universe because I don't have time
+                    to deal with people's emotions. Science is real, Morty.
+                </p>
+                <p class="sample-small">
+                    Status: Alive &nbsp;|&nbsp; Species: Human &nbsp;|&nbsp; Origin: Earth (C-137)
+                </p>
+            </div>
+        </section>
+
+        <section id="wireframes">
+            <h2>Wireframes</h2>
+
+            <figure class="wireframe">
+                <img
+                    src="images/Wireframe.png"
+                    alt="Home page wireframe showing the mobile and desktop layouts side by side: header with navigation, a random character spotlight, a grid of character cards, and a footer"
+                    width="1153"
+                    height="912"
+                    loading="lazy">
+                <figcaption>
+                    Home page wireframe — mobile and desktop views. This is an early draft generated
+                    with the help of AI, so some details such as the fonts, animations, and interactive
+                    features are still going to change during development.
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash; &copy; <span id="yr"></span> The Citadel Codex</p>
+        <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+    </footer>
+
+</body>
+</html>
