@@ -88,3 +88,101 @@
     align-items: start;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DISCOVER PAGE — Medium & Large screens (larger.css)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── MEDIUM screens (641px–1024px) ── */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  /* Side-by-side layout: facts sidebar + gallery */
+  .discover-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .boston-facts {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .discover-section {
+    flex: 1;
+  }
+
+  /* ── Gallery: MEDIUM — 2 columns, named grid areas (asymmetric) ── */
+  .discover-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "area1 area2"
+      "area3 area3"
+      "area4 area5"
+      "area6 area7"
+      "area8 area8";
+  }
+
+  /* Wider cards (full-row) get landscape image treatment */
+  .discover-gallery .area-3,
+  .discover-gallery .area-8 {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .discover-gallery .area-3 figure,
+  .discover-gallery .area-8 figure {
+    flex: 0 0 300px;
+  }
+
+  /* Image hover effect — medium and above only */
+  .discover-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .discover-card figure img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1) saturate(1.2);
+    box-shadow: 0 8px 20px rgba(0, 83, 43, 0.35);
+  }
+}
+
+/* ── LARGE screens (1025px and above) ── */
+@media (min-width: 1025px) {
+
+  /* Side-by-side layout */
+  .discover-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .boston-facts {
+    flex: 0 0 240px;
+    position: sticky;
+    top: 1rem;
+  }
+
+  .discover-section {
+    flex: 1;
+  }
+
+  /* ── Gallery: LARGE — 3 columns, named grid areas (varied layout) ── */
+  .discover-gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "area1 area1 area2"
+      "area3 area4 area5"
+      "area6 area7 area8";
+  }
+
+  /* Image hover effect — large screens */
+  .discover-card figure img {
+    transition: transform 0.35s ease, filter 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .discover-card figure img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.12) saturate(1.25);
+    box-shadow: 0 10px 24px rgba(0, 83, 43, 0.4);
+  }
+}

@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosthoughts - Directory</title>
-    <meta name="description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston. It offers a curated list of local businesses, events, attractions, and services to help residents and visitors navigate and explore the city. Whether you're looking for dining options, entertainment venues, or community resources, Bosthoughts aims to be a comprehensive guide to all things Boston.">
-    <meta name="keywords" content="Boston, directory, resources, local businesses, events, attractions, services, residents, visitors, dining options, entertainment venues, community resources">
+    <title>Bosthoughts - Discover Boston</title>
+    <meta name="description" content="Discover the best of Boston — iconic landmarks, historic sites, world-class museums, and cultural attractions that make Boston one of America's greatest cities.">
+    <meta name="keywords" content="Boston, discover Boston, attractions, landmarks, TD Garden, Freedom Trail, Fenway Park, Harvard, Quincy Market, Boston Harbor, Museum of Fine Arts">
     <meta name="author" content="Gustavo Fragas Cunha">
 
     <!-- Headline = Montserrat / Body = Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"> 
-    
-    <!-- Meta Properties -->
-    <meta property="og:title" content="Bosthoughts - Your Guide to Boston">
-    <meta property="og:description" content="Bosthoughts is a small website that provides a directory of resources and information related to the city of Boston.">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bosthoughts - Discover Boston">
+    <meta property="og:description" content="Explore Boston's iconic landmarks, historic sites, and cultural attractions.">
     <meta property="og:image" content="https://gustavofragas.github.io/wdd231/chamber/images/bosthoughts.png">
-    <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/directory.html">
-    
-    <!-- Favicon (small ICO only - jpeg removed to keep page weight under 500kB) -->
+    <meta property="og:url" content="https://gustavofragas.github.io/wdd231/chamber/discover.html">
+
+    <!-- Favicon -->
     <link rel="icon" href="images/faviconBosthoughts.ico" type="image/x-icon">
 
-    <!-- Connections pages -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/directory.js" defer></script>
 
+    <!-- Module script for ES imports -->
+    <script type="module" src="scripts/discover.js"></script>
 </head>
 <body>
     <header>
@@ -39,9 +40,9 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="https://www.byupathway.edu/" target="_blank" rel="noopener noreferrer">Events</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
             </ul>
         </nav>
         <button type="button" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
@@ -54,13 +55,53 @@
         </button>
     </header>
 
-    <main>
-        <h1>Member Directory</h1>
-        <div class="view-controls">
-            <button type="button" id="grid-btn" aria-label="Grid View" aria-pressed="true">Grid Layout</button>
-            <button type="button" id="list-btn" aria-label="List View" aria-pressed="false">List Layout</button>
+    <main class="discover">
+        <h1>Discover Boston</h1>
+
+        <!-- localStorage visit message -->
+        <div class="visit-banner" role="status" aria-live="polite">
+            <p id="visit-message"></p>
         </div>
-        <div id="directory-container">
+
+        <!-- Demographic sidebar + gallery grid -->
+        <div class="discover-layout">
+
+            <aside class="boston-facts" aria-label="Boston Demographics">
+                <h2>Boston at a Glance</h2>
+                <dl>
+                    <dt>Population</dt>
+                    <dd>675,647</dd>
+
+                    <dt>Founded</dt>
+                    <dd>1630</dd>
+
+                    <dt>Area</dt>
+                    <dd>89.6 sq miles</dd>
+
+                    <dt>Elevation</dt>
+                    <dd>141 ft above sea level</dd>
+
+                    <dt>Avg. Temperature</dt>
+                    <dd>51°F (10.7°C)</dd>
+
+                    <dt>Universities</dt>
+                    <dd>35+ colleges &amp; universities</dd>
+
+                    <dt>Fortune 500 HQs</dt>
+                    <dd>11 companies</dd>
+
+                    <dt>Annual Visitors</dt>
+                    <dd>Over 21 million</dd>
+                </dl>
+            </aside>
+
+            <section class="discover-section" aria-label="Points of Interest">
+                <h2>Points of Interest</h2>
+                <!-- Cards injected by discover.js -->
+                <div id="discover-gallery" class="discover-gallery">
+                </div>
+            </section>
+
         </div>
     </main>
 
