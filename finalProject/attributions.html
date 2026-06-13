@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Attributions — The Citadel Codex</title>
-  <meta name="description" content="Attributions and credits for The Citadel Codex project.">
+  <meta name="description" content="Attributions and credits for The Citadel Codex project, including API data, typography, and intellectual property acknowledgments.">
   <meta name="author" content="Gustavo Fragas Cunha">
+
+  <meta property="og:title" content="Attributions — The Citadel Codex">
+  <meta property="og:description" content="Sources and credits used in building The Citadel Codex Rick and Morty fan encyclopedia.">
+  <meta property="og:image" content="https://gustavofragas.github.io/wdd231/finalProject/images/og-image.webp">
+  <meta property="og:url" content="https://gustavofragas.github.io/wdd231/finalProject/attributions.html">
+  <meta property="og:type" content="website">
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script type="module">
@@ -20,7 +28,7 @@
 
   <header>
     <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
-      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <img src="images/favicon.ico" alt="Citadel Codex logo" width="36" height="36">
       <span class="logo-text">Citadel Codex</span>
     </a>
     <nav id="primaryNav" aria-label="Main navigation">
@@ -38,47 +46,47 @@
   <main>
     <div class="attr-page">
       <h1>Attributions</h1>
-      <p style="color:var(--muted);margin-bottom:1.5rem;">Sources and credits used in The Citadel Codex.</p>
+      <p class="attr-intro">Sources and credits used in The Citadel Codex.</p>
 
-      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:1rem;font-size:1rem;">API &amp; Data</h2>
+      <section class="attr-section">
+        <h2>API &amp; Data</h2>
         <ul>
           <li>
             Character data, images, and universe information provided by the
             <a href="https://rickandmortyapi.com" target="_blank" rel="noopener noreferrer">Rick and Morty API</a>
-            — free and open public API by Axel Fuhrmann.
+            &#x2014; free and open public API by Axel Fuhrmann.
           </li>
         </ul>
       </section>
 
-      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:1rem;font-size:1rem;">Typography</h2>
+      <section class="attr-section">
+        <h2>Typography</h2>
         <ul>
           <li>
             <a href="https://fonts.google.com/specimen/Orbitron" target="_blank" rel="noopener noreferrer">Orbitron</a>
-            by Matt McInerney — Google Fonts (Open Font License).
+            by Matt McInerney &#x2014; Google Fonts (Open Font License).
           </li>
           <li>
             <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener noreferrer">Roboto</a>
-            by Christian Robertson — Google Fonts (Apache License 2.0).
+            by Christian Robertson &#x2014; Google Fonts (Apache License 2.0).
           </li>
         </ul>
       </section>
 
-      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
-        <h2 style="margin-bottom:1rem;font-size:1rem;">Intellectual Property</h2>
+      <section class="attr-section">
+        <h2>Intellectual Property</h2>
         <ul>
           <li>
-            Rick and Morty™ is a trademark of Cartoon Network / Adult Swim.
+            Rick and Morty&#x2122; is a trademark of Cartoon Network / Adult Swim.
             This site is a fan project for educational purposes only and is not affiliated with or endorsed by Cartoon Network, Adult Swim, or their parent companies.
           </li>
         </ul>
       </section>
 
-      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;">
-        <h2 style="margin-bottom:1rem;font-size:1rem;">Development</h2>
+      <section class="attr-section">
+        <h2>Development</h2>
         <ul>
-          <li>Built with vanilla HTML, CSS, and JavaScript — no frameworks.</li>
+          <li>Built with vanilla HTML, CSS, and JavaScript &#x2014; no frameworks.</li>
           <li>Developed by Gustavo Fragas Cunha for WDD231, BYU Pathway Worldwide, 2025.</li>
         </ul>
       </section>
@@ -91,10 +99,9 @@
       <a href="characters.html">Multi-Database</a>
       <a href="registry.html">Registry</a>
       <a href="attributions.html">Attributions</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">&#x1F4F9; Video Demo</a>
     </div>
-    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
-      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash; &copy;<span id="currentyear"></span> The Citadel Codex</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 

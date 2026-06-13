@@ -4,11 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to the Citadel — The Citadel Codex</title>
-  <meta name="description" content="You have been registered as a Citadel Resident. Your details have been saved.">
+  <meta name="description" content="You have been registered as a Citadel Resident. Your registration details have been saved to your browser.">
   <meta name="author" content="Gustavo Fragas Cunha">
+
+  <meta property="og:title" content="Welcome to the Citadel — The Citadel Codex">
+  <meta property="og:description" content="Your Citadel Resident registration is confirmed. Browse Rick and Morty characters across the multiverse.">
+  <meta property="og:image" content="https://gustavofragas.github.io/wdd231/finalProject/images/og-image.webp">
+  <meta property="og:url" content="https://gustavofragas.github.io/wdd231/finalProject/thankyou.html">
+  <meta property="og:type" content="website">
+
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script type="module" src="scripts/thankyou.js"></script>
@@ -17,7 +25,7 @@
 
   <header>
     <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
-      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <img src="images/favicon.ico" alt="Citadel Codex logo" width="36" height="36">
       <span class="logo-text">Citadel Codex</span>
     </a>
     <nav id="primaryNav" aria-label="Main navigation">
@@ -34,15 +42,15 @@
 
   <main>
     <div class="thankyou-card">
-      <h1>🛸 Welcome to the Citadel!</h1>
+      <h1>&#x1F6F8; Welcome to the Citadel!</h1>
       <p>Your registration has been received. You are now an official Citadel Resident.</p>
-      <h2 style="margin-bottom:0.75rem;font-size:1rem;">Your Registration Details</h2>
+      <h2 class="thankyou-details-heading">Your Registration Details</h2>
       <ul id="registration-details">
         <!-- Populated by thankyou.js -->
       </ul>
-      <div style="margin-top:1.5rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
-        <a href="characters.html" class="btn btn-primary">Browse Characters →</a>
-        <a href="index.html" class="btn btn-outline">← Back to Home</a>
+      <div class="thankyou-cta-row">
+        <a href="characters.html" class="btn btn-primary">Browse Characters &#x2192;</a>
+        <a href="index.html" class="btn btn-outline">&#x2190; Back to Home</a>
       </div>
     </div>
   </main>
@@ -53,10 +61,9 @@
       <a href="characters.html">Multi-Database</a>
       <a href="registry.html">Registry</a>
       <a href="attributions.html">Attributions</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">&#x1F4F9; Video Demo</a>
     </div>
-    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
-      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash; &copy;<span id="currentyear"></span> The Citadel Codex</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 

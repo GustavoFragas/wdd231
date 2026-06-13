@@ -8,13 +8,15 @@
   <meta name="author" content="Gustavo Fragas Cunha">
 
   <meta property="og:title" content="Multi-Database — The Citadel Codex">
-  <meta property="og:description" content="Browse the complete Rick and Morty character database. Filter, search, and bookmark your favorites.">
+  <meta property="og:description" content="Browse the complete Rick and Morty character database. Filter, search, and bookmark your favorites across the multiverse.">
   <meta property="og:image" content="https://gustavofragas.github.io/wdd231/finalProject/images/og-image.webp">
   <meta property="og:url" content="https://gustavofragas.github.io/wdd231/finalProject/characters.html">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script type="module" src="scripts/characters.js"></script>
@@ -23,13 +25,13 @@
 
   <header>
     <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
-      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <img src="images/favicon.ico" alt="Citadel Codex logo" width="36" height="36">
       <span class="logo-text">Citadel Codex</span>
     </a>
     <nav id="primaryNav" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="characters.html" class="active">Multi-Database</a></li>
+        <li><a href="characters.html">Multi-Database</a></li>
         <li><a href="registry.html">Registry</a></li>
       </ul>
     </nav>
@@ -39,16 +41,13 @@
   </header>
 
   <main>
-    <h1 style="margin-bottom:0.5rem;">Multi-Database</h1>
-    <p style="color:var(--muted);margin-bottom:1.5rem;">
-      Searching the multiverse for registered entities…
-    </p>
+    <h1 class="page-heading">Multi-Database</h1>
+    <p class="page-intro">Searching the multiverse for registered entities&#x2026;</p>
 
-    <!-- Controls -->
     <div class="controls" role="search" aria-label="Character search and filter">
       <div class="search-wrap">
         <label for="search-input" class="sr-only">Search characters</label>
-        <input type="search" id="search-input" placeholder="Search character name…" autocomplete="off">
+        <input type="search" id="search-input" placeholder="Search character name&#x2026;" autocomplete="off">
       </div>
       <div class="filter-row">
         <label for="filter-status" class="sr-only">Filter by status</label>
@@ -79,32 +78,28 @@
           <option value="unknown">Unknown</option>
         </select>
 
-        <button type="button" id="fav-toggle" class="btn btn-outline">⭐ Favorites</button>
+        <button type="button" id="fav-toggle" class="btn btn-outline">&#x2B50; Favorites</button>
       </div>
     </div>
 
-    <!-- Results info -->
-    <p id="results-info" style="font-size:0.82rem;color:var(--muted);margin-bottom:0.75rem;" aria-live="polite"></p>
+    <p id="results-info" class="results-info" aria-live="polite"></p>
 
-    <!-- Character grid -->
     <div id="character-grid" role="list" aria-label="Character cards">
-      <p class="loading-msg">Loading characters from the multiverse…</p>
+      <p class="loading-msg">Loading characters from the multiverse&#x2026;</p>
     </div>
 
-    <!-- Pagination -->
     <nav class="pagination" aria-label="Page navigation">
-      <button type="button" id="prev-page" class="btn btn-outline" disabled>← Prev</button>
+      <button type="button" id="prev-page" class="btn btn-outline" disabled>&#x2190; Prev</button>
       <span id="page-info">Page 1</span>
-      <button type="button" id="next-page" class="btn btn-outline" disabled>Next →</button>
+      <button type="button" id="next-page" class="btn btn-outline" disabled>Next &#x2192;</button>
     </nav>
   </main>
 
-  <!-- Character modal -->
   <dialog id="char-modal" aria-modal="true" aria-labelledby="modal-char-name">
     <div class="modal-inner">
       <img id="modal-img" class="modal-img" src="" alt="" width="300" height="300" loading="lazy">
       <div class="modal-body">
-        <button type="button" class="modal-close" aria-label="Close modal">✕</button>
+        <button type="button" class="modal-close" aria-label="Close modal">&#x2715;</button>
         <h2 id="modal-char-name"></h2>
         <div class="modal-grid">
           <div class="modal-field">
@@ -123,11 +118,11 @@
             <label>Type</label>
             <span id="modal-type"></span>
           </div>
-          <div class="modal-field" style="grid-column:1/-1;">
+          <div class="modal-field modal-field-full">
             <label>Origin</label>
             <span id="modal-origin"></span>
           </div>
-          <div class="modal-field" style="grid-column:1/-1;">
+          <div class="modal-field modal-field-full">
             <label>Last Known Location</label>
             <span id="modal-location"></span>
           </div>
@@ -140,8 +135,8 @@
             <span id="modal-id"></span>
           </div>
         </div>
-        <button type="button" id="modal-fav-btn" class="btn btn-outline" style="width:100%;justify-content:center;">
-          ⭐ Add to Favorites
+        <button type="button" id="modal-fav-btn" class="btn btn-outline modal-fav-full">
+          &#x2B50; Add to Favorites
         </button>
       </div>
     </div>
@@ -153,10 +148,9 @@
       <a href="characters.html">Multi-Database</a>
       <a href="registry.html">Registry</a>
       <a href="attributions.html">Attributions</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">&#x1F4F9; Video Demo</a>
     </div>
-    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
-      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash; &copy;<span id="currentyear"></span> The Citadel Codex</p>
     <p>Last Modified: <span id="lastModified"></span></p>
     <p>Data provided by <a href="https://rickandmortyapi.com" target="_blank" rel="noopener noreferrer">rickandmortyapi.com</a></p>
   </footer>

@@ -8,13 +8,15 @@
   <meta name="author" content="Gustavo Fragas Cunha">
 
   <meta property="og:title" content="Galactic Registry — The Citadel Codex">
-  <meta property="og:description" content="Register as a Citadel Resident and share your Rick and Morty theories.">
+  <meta property="og:description" content="Register as a Citadel Resident and share your Rick and Morty theories with the multiverse community.">
   <meta property="og:image" content="https://gustavofragas.github.io/wdd231/finalProject/images/og-image.webp">
   <meta property="og:url" content="https://gustavofragas.github.io/wdd231/finalProject/registry.html">
+  <meta property="og:type" content="website">
 
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
   <script type="module" src="scripts/registry.js"></script>
@@ -23,14 +25,14 @@
 
   <header>
     <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
-      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <img src="images/favicon.ico" alt="Citadel Codex logo" width="36" height="36">
       <span class="logo-text">Citadel Codex</span>
     </a>
     <nav id="primaryNav" aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="characters.html">Multi-Database</a></li>
-        <li><a href="registry.html" class="active">Registry</a></li>
+        <li><a href="registry.html">Registry</a></li>
       </ul>
     </nav>
     <button type="button" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
@@ -67,7 +69,7 @@
             <label for="dimension">Dimension of Origin *</label>
             <input type="text" id="dimension" name="dimension"
               placeholder="C-137" required pattern="[A-Za-z0-9\-\s]{1,20}">
-            <span class="hint">Alphanumeric, max 20 characters. e.g. C-137, J19ζ7</span>
+            <span class="hint">Alphanumeric, max 20 characters. e.g. C-137</span>
             <span class="error-msg" aria-live="polite"></span>
           </div>
         </fieldset>
@@ -78,7 +80,7 @@
           <div class="form-group">
             <label for="fav-character">Favorite Character *</label>
             <select id="fav-character" name="favCharacter" required>
-              <option value="">— Select a character —</option>
+              <option value="">&#x2014; Select a character &#x2014;</option>
               <option value="Rick Sanchez">Rick Sanchez</option>
               <option value="Morty Smith">Morty Smith</option>
               <option value="Summer Smith">Summer Smith</option>
@@ -101,14 +103,14 @@
           <div class="form-group">
             <label for="theory">Character Theory</label>
             <textarea id="theory" name="theory" rows="4"
-              placeholder="Share your multiverse theory…"></textarea>
+              placeholder="Share your multiverse theory&#x2026;"></textarea>
           </div>
         </fieldset>
 
         <input type="hidden" name="timestamp" id="timestamp">
 
-        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:0.8rem;">
-          Register as Citadel Resident 🛸
+        <button type="submit" class="btn btn-primary btn-submit-full">
+          Register as Citadel Resident &#x1F6F8;
         </button>
 
       </form>
@@ -121,10 +123,9 @@
       <a href="characters.html">Multi-Database</a>
       <a href="registry.html">Registry</a>
       <a href="attributions.html">Attributions</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">&#x1F4F9; Video Demo</a>
     </div>
-    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
-      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash; &copy;<span id="currentyear"></span> The Citadel Codex</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 
