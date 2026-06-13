@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Citadel Codex — Rick &amp; Morty Encyclopedia</title>
+  <meta name="description" content="The Citadel Codex is an interactive Rick and Morty fan encyclopedia. Explore characters, dimensions, and the multiverse powered by the official Rick and Morty API.">
+  <meta name="author" content="Gustavo Fragas Cunha">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Citadel Codex — Rick &amp; Morty Encyclopedia">
+  <meta property="og:description" content="Explore the Rick and Morty multiverse. Characters, dimensions, and more.">
+  <meta property="og:image" content="https://gustavofragas.github.io/wdd231/finalProject/images/og-image.webp">
+  <meta property="og:url" content="https://gustavofragas.github.io/wdd231/finalProject/index.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script type="module" src="scripts/home.js"></script>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
+      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <span class="logo-text">Citadel Codex</span>
+    </a>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="characters.html">Multi-Database</a></li>
+        <li><a href="registry.html">Registry</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- Hero / Spotlight -->
+    <section class="hero" aria-label="Random character spotlight">
+      <h1>🛸 The Citadel Codex</h1>
+      <p>Your ultimate guide to the Rick and Morty multiverse. Explore characters across every dimension.</p>
+      <div id="spotlight" class="spotlight-card" aria-live="polite">
+        <div class="skeleton" style="width:120px;height:120px;border-radius:50%;"></div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:0.5rem;">
+          <div class="skeleton" style="height:1.2rem;width:140px;"></div>
+          <div class="skeleton" style="height:0.9rem;width:80px;"></div>
+        </div>
+      </div>
+      <div style="margin-top:1.25rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+        <button type="button" id="new-spotlight" class="btn btn-primary">New Character ⚡</button>
+        <a href="characters.html" class="btn btn-secondary">Browse All →</a>
+      </div>
+    </section>
+
+    <!-- Stats bar — populated by JS -->
+    <div class="stats-bar" id="stats-bar" aria-label="Multiverse statistics">
+      <div class="stat-box">
+        <strong id="stat-chars">…</strong>
+        <span>Characters</span>
+      </div>
+      <div class="stat-box">
+        <strong id="stat-episodes">…</strong>
+        <span>Episodes</span>
+      </div>
+      <div class="stat-box">
+        <strong id="stat-locations">…</strong>
+        <span>Locations</span>
+      </div>
+      <div class="stat-box">
+        <strong id="stat-favorites">…</strong>
+        <span>Your Favorites</span>
+      </div>
+    </div>
+
+    <!-- Featured section -->
+    <section aria-labelledby="featured-heading">
+      <h2 id="featured-heading" style="margin-bottom:1rem;">Featured Characters</h2>
+      <div id="featured-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;">
+        <!-- Populated by JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="characters.html">Multi-Database</a>
+      <a href="registry.html">Registry</a>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </div>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
+      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>Data provided by <a href="https://rickandmortyapi.com" target="_blank" rel="noopener noreferrer">rickandmortyapi.com</a></p>
+  </footer>
+
+</body>
+</html>

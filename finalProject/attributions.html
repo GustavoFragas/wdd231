@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attributions — The Citadel Codex</title>
+  <meta name="description" content="Attributions and credits for The Citadel Codex project.">
+  <meta name="author" content="Gustavo Fragas Cunha">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script type="module">
+    import { initNav } from './scripts/nav.js';
+    initNav();
+  </script>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
+      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <span class="logo-text">Citadel Codex</span>
+    </a>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="characters.html">Multi-Database</a></li>
+        <li><a href="registry.html">Registry</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <div class="attr-page">
+      <h1>Attributions</h1>
+      <p style="color:var(--muted);margin-bottom:1.5rem;">Sources and credits used in The Citadel Codex.</p>
+
+      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:1rem;font-size:1rem;">API &amp; Data</h2>
+        <ul>
+          <li>
+            Character data, images, and universe information provided by the
+            <a href="https://rickandmortyapi.com" target="_blank" rel="noopener noreferrer">Rick and Morty API</a>
+            — free and open public API by Axel Fuhrmann.
+          </li>
+        </ul>
+      </section>
+
+      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:1rem;font-size:1rem;">Typography</h2>
+        <ul>
+          <li>
+            <a href="https://fonts.google.com/specimen/Orbitron" target="_blank" rel="noopener noreferrer">Orbitron</a>
+            by Matt McInerney — Google Fonts (Open Font License).
+          </li>
+          <li>
+            <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener noreferrer">Roboto</a>
+            by Christian Robertson — Google Fonts (Apache License 2.0).
+          </li>
+        </ul>
+      </section>
+
+      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;margin-bottom:1.5rem;">
+        <h2 style="margin-bottom:1rem;font-size:1rem;">Intellectual Property</h2>
+        <ul>
+          <li>
+            Rick and Morty™ is a trademark of Cartoon Network / Adult Swim.
+            This site is a fan project for educational purposes only and is not affiliated with or endorsed by Cartoon Network, Adult Swim, or their parent companies.
+          </li>
+        </ul>
+      </section>
+
+      <section style="background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--primary);border-radius:8px;padding:1.5rem;">
+        <h2 style="margin-bottom:1rem;font-size:1rem;">Development</h2>
+        <ul>
+          <li>Built with vanilla HTML, CSS, and JavaScript — no frameworks.</li>
+          <li>Developed by Gustavo Fragas Cunha for WDD231, BYU Pathway Worldwide, 2025.</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="characters.html">Multi-Database</a>
+      <a href="registry.html">Registry</a>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </div>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
+      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+</body>
+</html>

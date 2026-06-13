@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Database — The Citadel Codex</title>
+  <meta name="description" content="Browse the complete Rick and Morty character database. Filter by status, species, and gender. Save your favorites using the bookmark feature.">
+  <meta name="author" content="Gustavo Fragas Cunha">
+
+  <meta property="og:title" content="Multi-Database — The Citadel Codex">
+  <meta property="og:description" content="Browse the complete Rick and Morty character database. Filter, search, and bookmark your favorites.">
+  <meta property="og:image" content="https://gustavofragas.github.io/wdd231/finalProject/images/og-image.webp">
+  <meta property="og:url" content="https://gustavofragas.github.io/wdd231/finalProject/characters.html">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script type="module" src="scripts/characters.js"></script>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html" aria-label="The Citadel Codex Home">
+      <img src="images/favicon.ico" alt="" width="36" height="36">
+      <span class="logo-text">Citadel Codex</span>
+    </a>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="characters.html" class="active">Multi-Database</a></li>
+        <li><a href="registry.html">Registry</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <h1 style="margin-bottom:0.5rem;">Multi-Database</h1>
+    <p style="color:var(--muted);margin-bottom:1.5rem;">
+      Searching the multiverse for registered entities…
+    </p>
+
+    <!-- Controls -->
+    <div class="controls" role="search" aria-label="Character search and filter">
+      <div class="search-wrap">
+        <label for="search-input" class="sr-only">Search characters</label>
+        <input type="search" id="search-input" placeholder="Search character name…" autocomplete="off">
+      </div>
+      <div class="filter-row">
+        <label for="filter-status" class="sr-only">Filter by status</label>
+        <select id="filter-status">
+          <option value="">All Status</option>
+          <option value="alive">Alive</option>
+          <option value="dead">Dead</option>
+          <option value="unknown">Unknown</option>
+        </select>
+
+        <label for="filter-species" class="sr-only">Filter by species</label>
+        <select id="filter-species">
+          <option value="">All Species</option>
+          <option value="Human">Human</option>
+          <option value="Alien">Alien</option>
+          <option value="Humanoid">Humanoid</option>
+          <option value="Robot">Robot</option>
+          <option value="Animal">Animal</option>
+          <option value="Mythological Creature">Mythological</option>
+        </select>
+
+        <label for="filter-gender" class="sr-only">Filter by gender</label>
+        <select id="filter-gender">
+          <option value="">All Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Genderless">Genderless</option>
+          <option value="unknown">Unknown</option>
+        </select>
+
+        <button type="button" id="fav-toggle" class="btn btn-outline">⭐ Favorites</button>
+      </div>
+    </div>
+
+    <!-- Results info -->
+    <p id="results-info" style="font-size:0.82rem;color:var(--muted);margin-bottom:0.75rem;" aria-live="polite"></p>
+
+    <!-- Character grid -->
+    <div id="character-grid" role="list" aria-label="Character cards">
+      <p class="loading-msg">Loading characters from the multiverse…</p>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="pagination" aria-label="Page navigation">
+      <button type="button" id="prev-page" class="btn btn-outline" disabled>← Prev</button>
+      <span id="page-info">Page 1</span>
+      <button type="button" id="next-page" class="btn btn-outline" disabled>Next →</button>
+    </nav>
+  </main>
+
+  <!-- Character modal -->
+  <dialog id="char-modal" aria-modal="true" aria-labelledby="modal-char-name">
+    <div class="modal-inner">
+      <img id="modal-img" class="modal-img" src="" alt="" width="300" height="300" loading="lazy">
+      <div class="modal-body">
+        <button type="button" class="modal-close" aria-label="Close modal">✕</button>
+        <h2 id="modal-char-name"></h2>
+        <div class="modal-grid">
+          <div class="modal-field">
+            <label>Status</label>
+            <span id="modal-status"></span>
+          </div>
+          <div class="modal-field">
+            <label>Species</label>
+            <span id="modal-species"></span>
+          </div>
+          <div class="modal-field">
+            <label>Gender</label>
+            <span id="modal-gender"></span>
+          </div>
+          <div class="modal-field">
+            <label>Type</label>
+            <span id="modal-type"></span>
+          </div>
+          <div class="modal-field" style="grid-column:1/-1;">
+            <label>Origin</label>
+            <span id="modal-origin"></span>
+          </div>
+          <div class="modal-field" style="grid-column:1/-1;">
+            <label>Last Known Location</label>
+            <span id="modal-location"></span>
+          </div>
+          <div class="modal-field">
+            <label>Episodes</label>
+            <span id="modal-episodes"></span>
+          </div>
+          <div class="modal-field">
+            <label>ID</label>
+            <span id="modal-id"></span>
+          </div>
+        </div>
+        <button type="button" id="modal-fav-btn" class="btn btn-outline" style="width:100%;justify-content:center;">
+          ⭐ Add to Favorites
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="characters.html">Multi-Database</a>
+      <a href="registry.html">Registry</a>
+      <a href="attributions.html">Attributions</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </div>
+    <p>WDD231 Final Project &mdash; Gustavo Fragas Cunha &mdash;
+      &copy;<span id="currentyear"></span> The Citadel Codex</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>Data provided by <a href="https://rickandmortyapi.com" target="_blank" rel="noopener noreferrer">rickandmortyapi.com</a></p>
+  </footer>
+
+</body>
+</html>

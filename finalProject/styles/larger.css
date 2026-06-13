@@ -1,0 +1,73 @@
+/* ═══════════════════════════════════════════════
+   The Citadel Codex — Medium & Large screens
+   ═══════════════════════════════════════════════ */
+
+/* ── Medium: 641px+ ──────────────────────────── */
+@media (min-width: 641px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.75rem 2rem;
+    position: relative;
+  }
+
+  #hamburger { display: none; }
+
+  nav#primaryNav { display: block; width: auto; }
+
+  nav#primaryNav ul {
+    flex-direction: row;
+    gap: 0.3rem;
+    padding: 0;
+  }
+
+  nav#primaryNav a { width: auto; font-size: 0.75rem; }
+
+  #character-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .controls {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .search-wrap { flex: 1; }
+  .filter-row { flex: 1; }
+
+  .spotlight-card {
+    flex-direction: row;
+    max-width: 480px;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .spotlight-card img { flex-shrink: 0; }
+}
+
+/* ── Large: 1025px+ ──────────────────────────── */
+@media (min-width: 1025px) {
+  header { padding: 0.75rem 3rem; }
+
+  main { padding: 2rem 2rem; }
+
+  #character-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .controls {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .filter-row { flex-wrap: nowrap; }
+
+  .modal-inner { flex-direction: row; }
+
+  .modal-img {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: var(--radius) 0 0 var(--radius);
+  }
+}
